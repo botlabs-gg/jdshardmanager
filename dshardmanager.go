@@ -329,7 +329,7 @@ func (m *Manager) logEventToDiscord(evt *Event) {
 		Timestamp:   evt.Time.Format(time.RFC3339),
 		Color:       eventColors[evt.Type],
 		Footer:      &discordgo.MessageEmbedFooter{
-			Text: "Time",
+			     Text: "Time",
 		},
 	}
 
