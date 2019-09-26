@@ -424,7 +424,7 @@ func (m *Manager) updateStatusMessage(mID int64) (int64, error) {
 		Color:       0x4286f4,
 		Timestamp:   time.Now().Format(time.RFC3339),
 		Footer:      &discordgo.MessageEmbedFooter{
-			Text: "Time",
+			     Text: "Time",
 		},
 	}
 
