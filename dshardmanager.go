@@ -328,6 +328,9 @@ func (m *Manager) logEventToDiscord(evt *Event) {
 		Description: prefix + str,
 		Timestamp:   evt.Time.Format(time.RFC3339),
 		Color:       eventColors[evt.Type],
+		Footer:      &discordgo.MessageEmbedFooter{
+			     Text: "Time",
+		},
 	}
 
 	_, err := m.bareSession.ChannelMessageSendEmbed(m.LogChannel, embed)
@@ -420,6 +423,9 @@ func (m *Manager) updateStatusMessage(mID int64) (int64, error) {
 		Description: content,
 		Color:       0x4286f4,
 		Timestamp:   time.Now().Format(time.RFC3339),
+		Footer:      &discordgo.MessageEmbedFooter{
+			     Text: "Time",
+		},
 	}
 
 	if mID == 0 {

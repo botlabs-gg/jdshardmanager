@@ -31,7 +31,7 @@ func main() {
 	}
 
 	if !strings.HasPrefix(FlagToken, "Bot ") {
-		log.Fatal("dshardmanager only works on bot accounts, did you maybe forgot to add `Bot ` before the token?")
+		log.Fatal("dshardmanager only works on bot accounts, did you forget to add `Bot ` before the token?")
 	}
 
 	manager := dshardmanager.New(FlagToken)
@@ -50,7 +50,7 @@ func main() {
 	log.Println("Starting the shard manager")
 	err = manager.Start()
 	if err != nil {
-		log.Fatal("Faled to start: ", err)
+		log.Fatal("Failed to start: ", err)
 	}
 
 	log.Println("Started!")
