@@ -2,24 +2,24 @@ package main
 
 import (
 	"flag"
-	// "github.com/bwmarrin/discordgo"
-	"github.com/jonas747/dshardmanager"
 	"log"
 	"net/http"
 	_ "net/http/pprof"
 	"os"
 	"strings"
+
+	dshardmanager "github.com/jonas747/jdshardmanager/v2"
 )
 
 var (
 	FlagToken      string
-	FlagLogChannel string
+	FlagLogChannel int64
 )
 
 func main() {
 
 	flag.StringVar(&FlagToken, "t", "", "Discord token")
-	flag.StringVar(&FlagLogChannel, "c", "", "Log channel, optional")
+	flag.Int64Var(&FlagLogChannel, "c", 0, "Log channel, optional")
 	flag.Parse()
 
 	log.Println("Starting v" + dshardmanager.VersionString)

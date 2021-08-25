@@ -2,13 +2,14 @@ package dshardmanager
 
 import (
 	"fmt"
-	"github.com/jonas747/discordgo"
-	"github.com/pkg/errors"
 	"log"
 	"strconv"
 	"strings"
 	"sync"
 	"time"
+
+	"github.com/jonas747/discordgo/v2"
+	"github.com/pkg/errors"
 )
 
 const (
